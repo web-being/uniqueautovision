@@ -71,7 +71,9 @@
    compact; width:auto keeps the aspect ratio. */
 .preview-container .section-GOJyXdDCbf .branding .logo img {
   width: auto !important;
-  height: 58px !important;
+  height: 42px !important;
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 /* With the header now a clean standalone bar (no negative margins), neutralise
@@ -104,3 +106,19 @@
 /* --- Home "Quality You Can Trust" block: more breathing room. --- */
 .preview-container #section-vlKTMujT-M { padding-left: 24px; padding-right: 24px; }
 .preview-container .col-xP_pqoVdA6 { padding: 40px 28px; }
+
+/* --- Service-page hero headings: keep the main H1 the same size on every page. --- */
+.preview-container .heading-Vh_AGLjAbU h1,
+.preview-container .heading-PZEGvkYH3t h1,
+.preview-container .heading-Y-Xts0zKWT h1,
+.preview-container .heading-8POIO7fRp3 h1 {
+  font-size: 48px !important;
+}
+@media screen and (max-width: 480px) {
+  .preview-container .heading-Vh_AGLjAbU h1,
+  .preview-container .heading-PZEGvkYH3t h1,
+  .preview-container .heading-Y-Xts0zKWT h1,
+  .preview-container .heading-8POIO7fRp3 h1 {
+    font-size: 34px !important;
+  }
+}
