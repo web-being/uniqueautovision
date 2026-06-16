@@ -1282,7 +1282,7 @@ img.banneroverimg {
 
   @media (max-width: 480px) {
         .bg-section-rTibTTNmEq {
-          background: url(/assets/images/680c72d84af0d9803bf112ef.jpeg);
+          background: url(/assets/images/680c72d84af0d9803bf112ef.webp);
     opacity: .5
 
         }
@@ -1290,7 +1290,7 @@ img.banneroverimg {
     
     @media (min-width: 481px) and (max-width: 1024px) {
         .bg-section-rTibTTNmEq {
-          background: url(/assets/images/680c72d84af0d9803bf112ef.jpeg);
+          background: url(/assets/images/680c72d84af0d9803bf112ef.webp);
     opacity: .5
 
         }
@@ -1298,7 +1298,7 @@ img.banneroverimg {
 
     @media (min-width: 1025px) {
         .bg-section-rTibTTNmEq {
-          background: url(/assets/images/680c72d84af0d9803bf112ef.jpeg);
+          background: url(/assets/images/680c72d84af0d9803bf112ef.webp);
         opacity: .5
 
         }
