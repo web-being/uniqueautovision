@@ -30,15 +30,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        run: |
-          # configure-pages returns "/" for root custom-domain sites, but Jekyll
-          # treats "/" as a path prefix and produces broken protocol-relative
-          # URLs like //assets/... Fall back to an empty baseurl in that case.
-          BASEURL="${{ steps.pages.outputs.base_path }}"
-          if [ "$BASEURL" = "/" ]; then
-            BASEURL=""
-          fi
-          bundle exec jekyll build --baseurl "$BASEURL"
+        # _config.yml already sets baseurl: "" for the root custom domain.
+        # Don't override it with configure-pages, which can return "/" and
+        # cause Jekyll to emit broken protocol-relative URLs like //assets/...
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
