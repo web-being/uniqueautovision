@@ -1,0 +1,58 @@
+# Pages CMS configuration — https://pagescms.org
+# Editable content lives in _data/*.yml (consumed by _layouts + _includes).
+# The HTML page bodies are intentionally NOT exposed here: they are faithful
+# snapshots of the original design and are not meant to be hand-edited.
+
+media:
+  input: assets/images
+  output: /assets/images
+  extensions: [png, jpg, jpeg, gif, svg, webp, ico]
+
+content:
+  - name: settings
+    label: Site settings
+    type: file
+    path: _data/site.yml
+    icon: settings
+    fields:
+      - { name: business_name, label: Business name, type: string }
+      - { name: description, label: Default SEO description, type: text }
+      - { name: phone, label: Phone (display), type: string }
+      - { name: phone_href, label: Phone link (tel:…), type: string }
+      - { name: email, label: Email, type: string }
+      - { name: address, label: Address, type: string }
+      - { name: maps_url, label: Google Maps URL, type: string, pattern: "^https?://" }
+      - { name: logo, label: Logo, type: image }
+      - { name: favicon, label: Favicon, type: image }
+      - { name: default_og_image, label: Default social-share image, type: image }
+      - { name: copyright, label: Footer copyright line, type: string }
+      - name: social
+        label: Social links
+        type: object
+        fields:
+          - { name: facebook, label: Facebook URL, type: string }
+          - { name: instagram, label: Instagram URL, type: string }
+          - { name: youtube, label: YouTube URL, type: string }
+
+  - name: menu
+    label: Navigation menu
+    type: file
+    path: _data/nav.yml
+    list: true
+    icon: menu
+    fields:
+      - { name: label, label: Label, type: string }
+      - { name: url, label: URL, type: string }
+
+  - name: pages
+    label: Pages (SEO)
+    type: file
+    path: _data/pages.yml
+    list: true
+    icon: file
+    fields:
+      - { name: name, label: Page, type: string }
+      - { name: key, label: Key — must match the page file name (do not change), type: string }
+      - { name: title, label: Browser/SEO title, type: string }
+      - { name: description, label: Meta description, type: text }
+      - { name: og_image, label: Social-share image, type: image }

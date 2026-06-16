@@ -1,0 +1,28 @@
+# Unique Auto Vision — Jekyll site (GitHub Pages)
+title: Unique Auto Vision
+description: >-
+  Unique Auto Vision specializes in premium automotive window tinting, ceramic
+  coatings, paint protection film (PPF), custom vinyl wraps, and graphics in
+  Longueuil, QC.
+lang: en
+
+# Used by {{ ... | absolute_url }} for canonical + Open Graph tags.
+# Set this to your production domain.
+url: "https://uniqueautovision.com"
+baseurl: ""
+
+# Per-page URLs are set explicitly via each page's `permalink:` front matter,
+# preserving the original site's paths exactly.
+
+encoding: utf-8
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor
+  - .work
+  - "*.md"

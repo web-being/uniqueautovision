@@ -1,0 +1,19 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby
+Gemfile.lock
+vendor/
+.bundle/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Tooling / verification artifacts
+.playwright-mcp/
+node_modules/
+.claude/

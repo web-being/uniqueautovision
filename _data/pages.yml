@@ -1,0 +1,63 @@
+# Per-page SEO — edited via Pages CMS. The layout matches `key` to each
+# page's `css_name` (its file stem). Title/description/og_image here override
+# the page's front matter, so content stays out of the HTML bodies.
+- key: index
+  name: Home
+  title: Unique Auto Vision
+  description: >-
+    Unique Auto Vision specializes in premium automotive window tinting, ceramic
+    coatings, paint protection film (PPF), custom vinyl wraps, and graphics in
+    Longueuil, QC. Lasting protection, unbeatable style, top-shelf service.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: ceramic-coating-uav
+  name: Ceramic Coating
+  title: Ceramic Coating | Unique Auto Vision
+  description: >-
+    Premium ceramic coatings in Longueuil — long-lasting gloss, hydrophobic
+    protection, and easier maintenance for your vehicle's paint.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: ceramic-tint-uav
+  name: Window Tint
+  title: Window Tint | Unique Auto Vision
+  description: >-
+    Automotive window tinting in Longueuil — heat rejection, UV protection,
+    privacy, and a sleek finish with professional installation.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: paint-protection-film-uav
+  name: Paint Protection Film
+  title: Paint Protection Film | Unique Auto Vision
+  description: >-
+    Paint protection film (PPF) in Longueuil — invisible, self-healing
+    protection that shields your paint from rock chips, scratches, and stains.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: wraps-uav
+  name: Wraps & Graphics
+  title: Vinyl Wraps & Graphics | Unique Auto Vision
+  description: >-
+    Custom vinyl wraps and graphics in Longueuil — transform your vehicle's look
+    with premium materials and expert installation.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: contact-us
+  name: Contact / Get a Quote
+  title: Get A Quote | Unique Auto Vision
+  description: >-
+    Get a free quote from Unique Auto Vision in Longueuil, QC. Call
+    (438) 801-9135 or send us your vehicle details — we're here to help.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: terms-conditions
+  name: Terms & Conditions
+  title: Terms & Conditions | Unique Auto Vision
+  description: Terms and conditions for Unique Auto Vision.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png
+
+- key: privacy-policy
+  name: Privacy Policy
+  title: Privacy Policy | Unique Auto Vision
+  description: Privacy policy for Unique Auto Vision.
+  og_image: /assets/images/6754fab0988a5fdf0f9f98d2.png

@@ -1,0 +1,33 @@
+/* Unique Auto Vision — small enhancements layered on top of the original
+ * GoHighLevel CSS (entry.css + per-page CSS). Loaded last so it can adjust
+ * the few behaviours that were previously driven by the Nuxt runtime. */
+
+/* FAQ accordion: animate the panel that site.js opens/closes. */
+.hl-faq-child-panel { transition: height .3s ease, padding .3s ease, opacity .3s ease; }
+
+/* Mobile nav drawer overlay (shown by site.js; styling reuses .nav-menu-body). */
+#nav-menu-popup.is-open {
+  display: block !important;
+  position: fixed; inset: 0; z-index: 99999;
+  /* GoHighLevel keeps the popup at opacity:0/visibility:hidden until its (removed)
+     JS opens it — force it visible here. */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#nav-menu-popup.is-open .nav-menu-body {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px;
+}
+#nav-menu-popup .nav-menu-body .close-menu {
+  position: absolute; top: 22px; right: 26px; cursor: pointer;
+}
+#nav-menu-popup.is-open .nav-menu {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+
+/* No-motion preference: reveal content immediately, skip entrance animations. */
+@media (prefers-reduced-motion: reduce) {
+  [data-animation-class] { opacity: 1 !important; animation: none !important; }
+}

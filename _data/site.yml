@@ -1,0 +1,28 @@
+# Site-wide content — edited via Pages CMS, consumed by _layouts + _includes.
+business_name: Unique Auto Vision
+description: >-
+  Unique Auto Vision specializes in premium automotive window tinting, ceramic
+  coatings, paint protection film (PPF), custom vinyl wraps, and graphics. Based
+  in Longueuil, we’re committed to protecting, enhancing, and personalizing your
+  vehicles and spaces with the highest-quality materials and expert installation.
+  Experience lasting protection, unbeatable style, and customer service that’s
+  truly top shelf.
+
+# Contact
+phone: "(438) 801-9135"
+phone_href: "tel:(438) 801-9135"
+email: "uautovision@gmail.com"
+address: "1849 Rue Laval, Longueuil, Quebec J4K3C2"
+maps_url: "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJm2rB4CwbyUwRQ4wrZsoCYKs"
+
+# Branding / SEO defaults
+logo: "/assets/images/6754c1cd53bb950229a70645.png"
+favicon: "/assets/images/6754c1cd53bb950229a70645.png"
+default_og_image: "/assets/images/6754fab0988a5fdf0f9f98d2.png"
+copyright: "Copyright 2024. All Right are Reserved."
+
+# Social
+social:
+  facebook: "https://www.facebook.com/people/Unique-Auto-Vision/61569946925702/"
+  instagram: "https://www.instagram.com/uniqueautovision/"
+  youtube: "https://www.youtube.com/@justtintitnow6466"

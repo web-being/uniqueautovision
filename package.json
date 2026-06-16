@@ -1,0 +1,13 @@
+{
+  "name": "unique-auto-vision",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static replica of uniqueautovision.com — Jekyll site for GitHub Pages, editable via Pages CMS.",
+  "scripts": {
+    "setup": "bundle install",
+    "dev": "bundle exec jekyll serve --livereload --open-url",
+    "serve": "bundle exec jekyll serve --livereload",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "clean": "bundle exec jekyll clean"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- assign pg = site.data.pages | where: "key", page.css_name | first -%}
+{%- assign p_title = pg.title | default: page.title | default: site.data.site.business_name | default: site.title -%}
+{%- assign p_desc = pg.description | default: page.description | default: site.data.site.description | default: site.description -%}
+{%- assign p_og = pg.og_image | default: page.og_image | default: site.data.site.default_og_image -%}
+<title>{{ p_title | escape }}</title>
+<meta name="description" content="{{ p_desc | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ p_title | escape }}">
+<meta property="og:description" content="{{ p_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{%- if p_og %}
+<meta property="og:image" content="{{ p_og | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ p_og | absolute_url }}">
+{%- endif %}
+<link rel="icon" href="{{ site.data.site.favicon | default: '/assets/images/6754c1cd53bb950229a70645.png' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7COpen%20Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CMontserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CInter:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CFamiljen%20Grotesk:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRoboto:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPlayfair%20Display:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CMerriweather:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CKanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPoppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7COswald:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRoboto%20Slab:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRoboto%20Mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAlata:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAladin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CNoto%20Sans%20JP:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAguafina%20Script:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRaleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAdvent%20Pro:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAbyssinica%20SIL:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPT%20Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAcme:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAllura:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CRubik:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAlumni%20Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CAmatic%20SC:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap">
+<link rel="stylesheet" href="/assets/css/entry.css">
+<link rel="stylesheet" href="/assets/css/page-{{ page.css_name }}.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<noscript><style>[data-animation-class]{opacity:1 !important;}</style></noscript>
+{%- if site.head_extra %}{{ site.head_extra }}{%- endif %}
+</head>
+<body>
+<div id="__nuxt"><!--[--><div></div><!--[--><div class="bgCover bg-fixed"></div><div><!--[--><div><!-- --><!-- --><div><div class="hide" id="nav-menu-popup" style="display:none;"><div class="nav-menu-body"><i class="close-menu fas fa-times"></i><ul class="nav-menu"><!--[--><!--]--></ul></div></div></div><!-- --><!--[--><!--]--><div class="preview-container hl_page-preview--content" id="preview-container"><div><!-- --><!--[--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!--]-->{% include header.html %}
+{{ content }}
+{% if page.footer != false %}{% include footer.html %}{% endif %}</div></div><!-- --><!-- --><!-- --></div><!--]--></div><!--]--><!--]--></div>
+{% include scripts.html %}
+</body>
+</html>

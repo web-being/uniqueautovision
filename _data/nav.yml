@@ -1,0 +1,12 @@
+# Primary navigation menu — edited via Pages CMS, rendered in _includes/header.html
+# (and cloned into the mobile drawer by assets/js/site.js).
+- label: WINDOW TINT
+  url: /ceramic-tint-uav
+- label: CERAMIC COATING
+  url: /ceramic-coating-uav
+- label: PAINT PROTECTION
+  url: /paint-protection-film-uav
+- label: GRAPHICS
+  url: /wraps-uav
+- label: CONTACT
+  url: /contact-us-4240-9253-1908-4979
