@@ -31,3 +31,47 @@
 @media (prefers-reduced-motion: reduce) {
   [data-animation-class] { opacity: 1 !important; animation: none !important; }
 }
+
+/* ==========================================================================
+   Design refinements (UI tweaks requested for the UAV site)
+   Scoped under .preview-container for specificity over the GoHighLevel
+   `.hl_page-preview--content …` rules, which these intentionally override.
+   ========================================================================== */
+
+/* --- Header: identical height + vertically centered menu on every page.
+   The header markup (header.html) is shared, but each per-page CSS sheet
+   shipped negative-margin overlap hacks (section -50px/-32px, nav -33px)
+   that made the bar overlap neighbouring content by a different amount on
+   each page, so the apparent height varied. Removing them turns the header
+   into a self-contained bar that renders the same everywhere. --- */
+.preview-container .section-GOJyXdDCbf { margin: 0 !important; }
+.preview-container .cnav-menu-qo6ywFO0C7 { margin-top: 0 !important; }
+.preview-container .section-GOJyXdDCbf > .inner { padding-top: 10px; padding-bottom: 10px; }
+
+/* Vertically centre the logo and the menu within the header bar. */
+.preview-container .nav-menu-wrapper.default {
+  align-items: center;
+  min-height: 80px;
+}
+
+/* --- Active nav item: brand-red highlight (set via .is-active in header.html). --- */
+.preview-container .nav-menu-link.is-active {
+  color: var(--color-m4ll5dm0) !important;             /* #C30115 */
+  position: relative;
+}
+.preview-container .nav-menu-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 6px; right: 6px; bottom: -8px;
+  height: 2px;
+  background: var(--color-m4ll5dm0);
+  border-radius: 2px;
+}
+
+/* --- Contact page "Get in touch" block: align heading + intro to the left. --- */
+.preview-container .cheading-f5zZy9s7Zl,
+.preview-container .csub-heading-9F11do0ms4 { text-align: left; }
+
+/* --- Home "Quality You Can Trust" block: more breathing room. --- */
+.preview-container #section-vlKTMujT-M { padding-left: 24px; padding-right: 24px; }
+.preview-container .col-xP_pqoVdA6 { padding: 40px 28px; }
