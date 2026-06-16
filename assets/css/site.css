@@ -81,6 +81,28 @@
    old tall header — otherwise it would hide most of the compact bar. */
 .preview-container .section-GOJyXdDCbf + .c-section { margin-top: 0 !important; }
 
+/* --- Footer logo: smaller and without the overlap/negative margin. --- */
+.preview-container .image-8N59eXegCS {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.preview-container .image-8N59eXegCS .image-container img {
+  width: 160px !important;
+  height: auto !important;
+}
+@media screen and (max-width: 480px) {
+  .preview-container .image-8N59eXegCS .image-container img {
+    width: 130px !important;
+  }
+}
+
+/* --- Phone numbers in headings: keep them clickable but looking like text. --- */
+.preview-container .text-output h2 a[href^="tel:"],
+.preview-container .text-output h3 a[href^="tel:"] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 /* --- Active nav item: brand-red highlight (set via .is-active in header.html). --- */
 .preview-container .nav-menu-link.is-active {
   color: var(--color-m4ll5dm0) !important;             /* #C30115 */
@@ -96,11 +118,22 @@
 }
 
 /* --- Contact page "Get in touch" block: align heading + intro to the left. --- */
+.preview-container #heading-f5zZy9s7Zl,
 .preview-container .cheading-f5zZy9s7Zl,
+.preview-container .heading-f5zZy9s7Zl,
 .preview-container .cheading-f5zZy9s7Zl h1,
+.preview-container .heading-f5zZy9s7Zl h1,
+.preview-container #sub-heading-9F11do0ms4,
 .preview-container .csub-heading-9F11do0ms4,
-.preview-container .csub-heading-9F11do0ms4 h2 {
+.preview-container .sub-heading-9F11do0ms4,
+.preview-container .csub-heading-9F11do0ms4 h2,
+.preview-container .sub-heading-9F11do0ms4 h2 {
   text-align: left !important;
+}
+/* The column above centers its children via align-items; force items to the
+   left edge so the left-aligned text actually sits on the left. */
+.preview-container #col-s1ic3eq6vf > .inner {
+  align-items: flex-start !important;
 }
 
 /* --- Home "Quality You Can Trust" block: more breathing room. --- */
