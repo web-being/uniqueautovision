@@ -1114,7 +1114,7 @@ img.banneroverimg {
 
   @media (max-width: 480px) {
         .bg-section-vlKTMujT-M {
-          background: url(/assets/images/675bb1c5986c6a5bf9a77346.webp);
+          background: url(../images/675bb1c5986c6a5bf9a77346.webp);
     opacity: .5
 
         }
@@ -1122,7 +1122,7 @@ img.banneroverimg {
     
     @media (min-width: 481px) and (max-width: 1024px) {
         .bg-section-vlKTMujT-M {
-          background: url(/assets/images/675bb1c5986c6a5bf9a77346.webp);
+          background: url(../images/675bb1c5986c6a5bf9a77346.webp);
     opacity: .5
 
         }
@@ -1130,7 +1130,7 @@ img.banneroverimg {
 
     @media (min-width: 1025px) {
         .bg-section-vlKTMujT-M {
-          background: url(/assets/images/675bb1c5986c6a5bf9a77346.webp);
+          background: url(../images/675bb1c5986c6a5bf9a77346.webp);
         opacity: .5
 
         }

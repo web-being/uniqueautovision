@@ -1281,7 +1281,7 @@ img.banneroverimg {
 
   @media (max-width: 480px) {
         .bg-section-eafaxpj_D8 {
-          background: url(/assets/images/680eaae1b3d583ee45c9a409.webp);
+          background: url(../images/680eaae1b3d583ee45c9a409.webp);
     opacity: .3
 
         }
@@ -1289,7 +1289,7 @@ img.banneroverimg {
     
     @media (min-width: 481px) and (max-width: 1024px) {
         .bg-section-eafaxpj_D8 {
-          background: url(/assets/images/680eaae1b3d583ee45c9a409.webp);
+          background: url(../images/680eaae1b3d583ee45c9a409.webp);
     opacity: .3
 
         }
@@ -1297,7 +1297,7 @@ img.banneroverimg {
 
     @media (min-width: 1025px) {
         .bg-section-eafaxpj_D8 {
-          background: url(/assets/images/680eaae1b3d583ee45c9a409.webp);
+          background: url(../images/680eaae1b3d583ee45c9a409.webp);
         opacity: .3
 
         }
