@@ -38,21 +38,46 @@
    `.hl_page-preview--content …` rules, which these intentionally override.
    ========================================================================== */
 
-/* --- Header: identical height + vertically centered menu on every page.
+/* --- Header: compact, symmetric, identical on every page.
    The header markup (header.html) is shared, but each per-page CSS sheet
-   shipped negative-margin overlap hacks (section -50px/-32px, nav -33px)
-   that made the bar overlap neighbouring content by a different amount on
-   each page, so the apparent height varied. Removing them turns the header
-   into a self-contained bar that renders the same everywhere. --- */
-.preview-container .section-GOJyXdDCbf { margin: 0 !important; }
-.preview-container .cnav-menu-qo6ywFO0C7 { margin-top: 0 !important; }
-.preview-container .section-GOJyXdDCbf > .inner { padding-top: 10px; padding-bottom: 10px; }
+   layered several overlap hacks onto the same elements (the section had
+   margin:-50px/-32px, the column margin:0 0 -40px, the nav margin-top:-33px,
+   plus stray padding:15px/10px at several levels). Together they made the
+   bar taller than the logo needs and gave it uneven top/bottom spacing.
+   Reset the whole chain, then size the bar from a single source of truth. --- */
+.preview-container .section-GOJyXdDCbf,
+.preview-container .section-GOJyXdDCbf > .inner,
+.preview-container .section-GOJyXdDCbf .row-sxt9-BIeT9,
+.preview-container .section-GOJyXdDCbf .row-sxt9-BIeT9 > .inner,
+.preview-container .section-GOJyXdDCbf .col-N0C8OpGbc2,
+.preview-container .section-GOJyXdDCbf .col-N0C8OpGbc2 > .inner,
+.preview-container .section-GOJyXdDCbf .c-nav-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 
-/* Vertically centre the logo and the menu within the header bar. */
+/* Single source of truth for the bar height: symmetric vertical padding on
+   the wrapper, with logo + menu vertically centred. */
 .preview-container .nav-menu-wrapper.default {
   align-items: center;
-  min-height: 80px;
+  padding: 10px 0;          /* equal top & bottom -> balanced header */
+  min-height: 0;
 }
+
+/* The logo source is a 500x500 square; the inline width:190px made it render
+   190px tall and dominate the bar. Constrain its height so the header stays
+   compact; width:auto keeps the aspect ratio. */
+.preview-container .section-GOJyXdDCbf .branding .logo img {
+  width: auto !important;
+  height: 58px !important;
+}
+
+/* With the header now a clean standalone bar (no negative margins), neutralise
+   the legacy negative top-margin the homepage hero used to slide up under the
+   old tall header — otherwise it would hide most of the compact bar. */
+.preview-container .section-GOJyXdDCbf + .c-section { margin-top: 0 !important; }
 
 /* --- Active nav item: brand-red highlight (set via .is-active in header.html). --- */
 .preview-container .nav-menu-link.is-active {
@@ -70,7 +95,11 @@
 
 /* --- Contact page "Get in touch" block: align heading + intro to the left. --- */
 .preview-container .cheading-f5zZy9s7Zl,
-.preview-container .csub-heading-9F11do0ms4 { text-align: left; }
+.preview-container .cheading-f5zZy9s7Zl h1,
+.preview-container .csub-heading-9F11do0ms4,
+.preview-container .csub-heading-9F11do0ms4 h2 {
+  text-align: left !important;
+}
 
 /* --- Home "Quality You Can Trust" block: more breathing room. --- */
 .preview-container #section-vlKTMujT-M { padding-left: 24px; padding-right: 24px; }
